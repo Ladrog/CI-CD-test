@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-nw^y+m^wmxza1asgk+)!ua2qx9)g+#v=6%76-9i8i(6eqiw94j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.environ.get('PG_NAME'),
         "USER": os.environ.get('PG_USER'),
         "PASSWORD": os.environ.get('PG_PASSWORD'),
